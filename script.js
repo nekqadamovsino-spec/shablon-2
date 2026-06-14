@@ -1,0 +1,6 @@
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('hide'),900));
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const wedding=new Date('2027-06-18T16:00:00+03:00');
+function tick(){const now=new Date();let diff=wedding-now;if(diff<0)diff=0;const d=Math.floor(diff/86400000);const h=Math.floor(diff%86400000/3600000);const m=Math.floor(diff%3600000/60000);const s=Math.floor(diff%60000/1000);days.textContent=String(d).padStart(2,'0');hours.textContent=String(h).padStart(2,'0');minutes.textContent=String(m).padStart(2,'0');seconds.textContent=String(s).padStart(2,'0')}tick();setInterval(tick,1000);
+function sendRSVP(e){e.preventDefault();const name=document.getElementById('name').value.trim();const status=document.getElementById('status').value;const comment=document.getElementById('comment').value.trim();const text=`Здравствуйте! RSVP на свадьбу Александры и Павла:%0AИмя: ${encodeURIComponent(name)}%0AСтатус: ${encodeURIComponent(status)}%0AКомментарий: ${encodeURIComponent(comment)}`;window.open(`https://wa.me/?text=${text}`,'_blank')}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Александра & Павел — 18.06.2027</title>
+  <meta name="description" content="Свадебное приглашение Александры и Павла" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader__mark">A&nbsp;P</div>
+    <div class="loader__line"></div>
+    <p>Загрузка приглашения...</p>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero__bg"></div>
+    <div class="hero__shade"></div>
+    <div class="monogram reveal">AP</div>
+    <div class="hero__content reveal delay-1">
+      <p class="eyebrow">Wedding invitation</p>
+      <h1>Александра<br><span>&</span><br>Павел</h1>
+      <div class="date">18&nbsp;/&nbsp;06&nbsp;/&nbsp;2027</div>
+      <a class="scroll" href="#invite">листайте вниз</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro" id="invite">
+      <p class="small-title reveal">Дорогие гости</p>
+      <h2 class="reveal">Мы приглашаем вас разделить с нами день, с которого начинается наша семья</h2>
+      <p class="text reveal">Будем счастливы видеть вас на нашей свадьбе. Для нас важно, чтобы этот вечер прошёл рядом с самыми близкими людьми.</p>
+    </section>
+
+    <section class="section split">
+      <div class="split__image reveal"><img src="assets/photo1.jpg" alt="Wedding photo"></div>
+      <div class="split__text reveal">
+        <p class="small-title">Save the date</p>
+        <h2>18 июня 2027</h2>
+        <p>Сбор гостей и торжественный вечер пройдут в ресторане <b>Moskwa</b>.</p>
+      </div>
+    </section>
+
+    <section class="section countdown-wrap">
+      <p class="small-title reveal">До свадьбы осталось</p>
+      <div class="countdown reveal" id="countdown">
+        <div><b id="days">00</b><span>дней</span></div>
+        <div><b id="hours">00</b><span>часов</span></div>
+        <div><b id="minutes">00</b><span>минут</span></div>
+        <div><b id="seconds">00</b><span>секунд</span></div>
+      </div>
+    </section>
+
+    <section class="section program">
+      <p class="small-title reveal">Программа дня</p>
+      <div class="timeline">
+        <div class="time reveal"><span>16:00</span><p>Сбор гостей</p></div>
+        <div class="time reveal"><span>16:30</span><p>Торжественная церемония</p></div>
+        <div class="time reveal"><span>17:30</span><p>Праздничный ужин</p></div>
+        <div class="time reveal"><span>22:30</span><p>Финал вечера</p></div>
+      </div>
+    </section>
+
+    <section class="section gallery">
+      <p class="small-title reveal">Mood</p>
+      <h2 class="reveal">Элегантность, вечерний свет и глубокий синий акцент</h2>
+      <div class="grid">
+        <img class="reveal" src="assets/photo2.jpg" alt="Gallery image">
+        <img class="reveal" src="assets/photo3.jpg" alt="Gallery image">
+        <img class="reveal wide" src="assets/photo4.jpg" alt="Gallery image">
+      </div>
+    </section>
+
+    <section class="section location">
+      <p class="small-title reveal">Локация</p>
+      <h2 class="reveal">Ресторан Moskwa</h2>
+      <p class="text reveal">Адрес можно заменить в файле index.html. Кнопка ниже ведёт на поиск ресторана на карте.</p>
+      <a class="btn reveal" target="_blank" href="https://yandex.ru/maps/?text=Ресторан%20Moskwa">Открыть карту</a>
+    </section>
+
+    <section class="section rsvp">
+      <p class="small-title reveal">Подтвердите присутствие</p>
+      <h2 class="reveal">Пожалуйста, сообщите нам, сможете ли вы быть с нами</h2>
+      <form class="form reveal" onsubmit="sendRSVP(event)">
+        <input id="name" placeholder="Ваше имя" required>
+        <select id="status">
+          <option>Буду с радостью</option>
+          <option>Буду не один / не одна</option>
+          <option>К сожалению, не смогу</option>
+        </select>
+        <textarea id="comment" placeholder="Комментарий / пожелание"></textarea>
+        <button class="btn" type="submit">Отправить в WhatsApp</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">A&nbsp;&amp;&nbsp;P</div>
+    <p>18.06.2027 · Alexandra & Pavel</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
